@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      data-theme="auto"
+      data-theme="light"
       lang="zh"
     >
       <body

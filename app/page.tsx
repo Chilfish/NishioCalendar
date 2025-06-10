@@ -3,7 +3,10 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 export default function Home() {
   return (
-    <ThemeProvider>
+    <ThemeProvider
+      defaultTheme="light"
+      forcedTheme="light"
+    >
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
         <main className="container mx-auto p-6 pb-4">
           <NishioCalendar />
