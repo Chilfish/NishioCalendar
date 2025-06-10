@@ -3,5 +3,7 @@ export interface NishioEvent {
   nishioDate: string
   tweetUrl: string
   tweetText: string
-  imageUrl?: string
+  likes: number
+  comments: number
+  retweets: number
 }

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-        <main className="container mx-auto px-4 py-8 md:py-12">
+        <main className="container mx-auto p-6 pb-4">
           <NishioCalendar />
         </main>
       </div>

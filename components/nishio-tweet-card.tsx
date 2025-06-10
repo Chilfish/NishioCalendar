@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
-import { Heart, MessageCircle, Repeat, ExternalLink, Twitter } from "lucide-react"
+import { Heart, MessageCircle, Repeat, ExternalLink } from "lucide-react"
 import { motion } from "framer-motion"
 import { format } from "date-fns"
 import { zhCN } from "date-fns/locale"
@@ -15,8 +15,6 @@ interface NishioTweetCardProps {
 }
 
 export function NishioTweetCard({ event }: NishioTweetCardProps) {
-  const [liked, setLiked] = useState(false)
-
   const handleViewTweet = () => {
     window.open(event.tweetUrl, '_blank', 'noopener,noreferrer')
   }
@@ -26,22 +24,18 @@ export function NishioTweetCard({ event }: NishioTweetCardProps) {
       initial={{ opacity: 0, y: 20 }} 
       animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 0.3 }}
-      whileHover={{ scale: 1.02 }}
       className="group"
     >
-      <Card className="overflow-hidden border border-gray-200/80 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-md bg-white/70 backdrop-blur-sm">
-        <CardContent className="p-5">
+      <Card className="overflow-hidden gap-2 py-2 border border-gray-200/80 shadow-sm bg-card backdrop-blur-sm">
+        <CardContent className="p-3">
           <div className="flex items-start space-x-4">
             <div className="relative">
-              <Avatar className="w-12 h-12 ring-2 ring-primary/10 group-hover:ring-primary/20 transition-all">
-                <AvatarImage src="https://picsum.photos/200?random=avatar" alt="@240y_k" />
+              <Avatar className="w-12 h-12 ring-2 ring-primary/10 transition-all">
+                <AvatarImage src="https://pbs.twimg.com/profile_images/1636675305812422656/Sz3moSfs_400x400.jpg" alt="@240y_k" />
                 <AvatarFallback className="bg-gradient-to-br from-primary to-primary/80 text-white font-medium">
-                  西
+                  西尾
                 </AvatarFallback>
               </Avatar>
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-primary rounded-full flex items-center justify-center">
-                <Twitter className="w-2.5 h-2.5 text-white" />
-              </div>
             </div>
             <div className="flex-1 space-y-2">
               <div className="flex items-center justify-between">
@@ -59,42 +53,30 @@ export function NishioTweetCard({ event }: NishioTweetCardProps) {
                 </Badge>
               </div>
               <p className="text-gray-800 leading-relaxed text-sm">{event.tweetText}</p>
-              {event.imageUrl && (
-                <div className="mt-3 rounded-xl overflow-hidden border border-gray-200">
-                  <img 
-                    src={event.imageUrl} 
-                    alt="推文图片" 
-                    className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              )}
             </div>
           </div>
         </CardContent>
-        <CardFooter className="px-5 py-3 border-t border-gray-100/80 flex justify-between items-center bg-gray-50/50">
+        <CardFooter className="px-4 py-2! border-t border-gray-100/80 flex justify-between items-center bg-gray-50/50">
           <div className="flex space-x-6">
             <button className="flex items-center space-x-1.5 text-gray-500 hover:text-blue-500 transition-colors group/btn">
               <div className="p-1.5 rounded-full group-hover/btn:bg-blue-50 transition-colors">
                 <MessageCircle className="w-4 h-4" />
               </div>
-              <span className="text-xs font-medium">42</span>
+              <span className="text-xs font-medium">{event.comments}</span>
             </button>
             <button className="flex items-center space-x-1.5 text-gray-500 hover:text-green-500 transition-colors group/btn">
               <div className="p-1.5 rounded-full group-hover/btn:bg-green-50 transition-colors">
                 <Repeat className="w-4 h-4" />
               </div>
-              <span className="text-xs font-medium">12</span>
+              <span className="text-xs font-medium">{event.retweets}</span>
             </button>
             <button
-              className={`flex items-center space-x-1.5 transition-colors group/btn ${
-                liked ? "text-red-500" : "text-gray-500 hover:text-red-500"
-              }`}
-              onClick={() => setLiked(!liked)}
+              className={`flex items-center space-x-1.5 transition-colors group/btn`}
             >
-              <div className="p-1.5 rounded-full group-hover/btn:bg-red-50 transition-colors">
-                <Heart className={`w-4 h-4 ${liked ? "fill-current" : ""}`} />
+              <div className="p-1.5 rounded-full group-hover/btn:bg-red-50 transition-colors text-red-500">
+                <Heart className={`w-4 h-4 fill-current`} />
               </div>
-              <span className="text-xs font-medium">{liked ? "124" : "123"}</span>
+              <span className="text-xs font-medium">{event.likes}</span>
             </button>
           </div>
           <button
