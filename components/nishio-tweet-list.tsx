@@ -1,13 +1,11 @@
-"use client"
-
-import { forwardRef, RefObject } from "react"
-import { NishioTweetCard } from "@/components/nishio-tweet-card"
-import type { NishioEvent } from "@/lib/types"
+import { forwardRef, RefObject } from "react";
+import { NishioTweetCard } from "@/components/nishio-tweet-card";
+import type { NishioEvent } from "@/lib/types";
 
 interface NishioTweetListProps {
-  events: NishioEvent[]
-  visibleTweetIndex: number
-  tweetRefs: RefObject<(HTMLDivElement | null)[]>
+  events: NishioEvent[];
+  visibleTweetIndex: number;
+  tweetRefs: RefObject<(HTMLDivElement | null)[]>;
 }
 
 export const NishioTweetList = forwardRef<HTMLDivElement, NishioTweetListProps>(
@@ -23,7 +21,7 @@ export const NishioTweetList = forwardRef<HTMLDivElement, NishioTweetListProps>(
               key={index}
               ref={(el) => {
                 if (tweetRefs.current) {
-                  tweetRefs.current[index] = el
+                  tweetRefs.current[index] = el;
                 }
               }}
               className={`
@@ -36,8 +34,8 @@ export const NishioTweetList = forwardRef<HTMLDivElement, NishioTweetListProps>(
           ))}
         </div>
       </div>
-    )
-  }
-)
+    );
+  },
+);
 
-NishioTweetList.displayName = "NishioTweetList"
+NishioTweetList.displayName = "NishioTweetList";

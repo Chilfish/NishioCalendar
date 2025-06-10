@@ -1,26 +1,24 @@
-"use client"
-
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Heart, MessageCircle, Repeat, ExternalLink } from "lucide-react"
-import { motion } from "framer-motion"
-import { format } from "date-fns"
-import { zhCN } from "date-fns/locale"
-import type { NishioEvent } from "@/lib/types"
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Heart, MessageCircle, Repeat, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
+import { format } from "date-fns";
+import { zhCN } from "date-fns/locale";
+import type { NishioEvent } from "@/lib/types";
 
 interface NishioTweetCardProps {
-  event: NishioEvent
+  event: NishioEvent;
 }
 
 export function NishioTweetCard({ event }: NishioTweetCardProps) {
   const handleViewTweet = () => {
-    window.open(event.tweetUrl, '_blank', 'noopener,noreferrer')
-  }
+    window.open(event.tweetUrl, "_blank", "noopener,noreferrer");
+  };
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }} 
-      animate={{ opacity: 1, y: 0 }} 
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
       className="group"
     >
@@ -39,15 +37,21 @@ export function NishioTweetCard({ event }: NishioTweetCardProps) {
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <div className="flex items-center space-x-2">
-                    <span className="font-semibold text-gray-900">西尾夕香</span>
+                    <span className="font-semibold text-gray-900">
+                      西尾夕香
+                    </span>
                     <span className="text-gray-500 text-sm">@240y_k</span>
                   </div>
                   <div className="text-xs text-gray-400">
-                    {format(event.realDate, "yyyy年M月d日 HH:mm", { locale: zhCN })}
+                    {format(event.realDate, "yyyy年M月d日 HH:mm", {
+                      locale: zhCN,
+                    })}
                   </div>
                 </div>
               </div>
-              <p className="text-gray-800 leading-relaxed text-sm">{event.tweetText}</p>
+              <p className="text-gray-800 leading-relaxed text-sm">
+                {event.tweetText}
+              </p>
             </div>
           </div>
         </CardContent>
@@ -79,10 +83,9 @@ export function NishioTweetCard({ event }: NishioTweetCardProps) {
             className="flex items-center gap-1 px-3 py-1.5 text-primary hover:text-primary/80 bg-primary/5 hover:bg-primary/10 rounded-full transition-all text-xs font-medium border border-primary/20 hover:border-primary/30"
           >
             <ExternalLink className="w-3.5 h-3.5" />
-            <span>查看推文</span>
           </button>
         </CardFooter>
       </Card>
     </motion.div>
-  )
+  );
 }

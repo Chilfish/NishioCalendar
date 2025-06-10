@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import React, { Suspense } from "react";
-import { ClientIntlProvider } from "@/components/client-intl-provider";
+import "../globals.css";
+import React from "react";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { redirect } from "next/navigation";
+import { routing } from "@/i18n/routing";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,26 +27,32 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
     languages: {
-      zh: "/",
-      ja: "/?lang=ja",
+      zh: "/zh",
+      ja: "/ja",
     },
   },
   metadataBase: new URL("https://nishio.chilfish.top"),
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
+  // Ensure that the incoming `locale` is valid
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    redirect(`/zh`);
+  }
+
   return (
-    <html>
+    <html data-theme="light" lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Suspense>
-          <ClientIntlProvider>{children}</ClientIntlProvider>
-        </Suspense>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

@@ -1,27 +1,31 @@
-"use client"
-
-import { Calendar } from "@/components/ui/calendar"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { isToday } from "date-fns"
-import { zhCN } from "date-fns/locale"
-import { 
-  getDateDisplayInfo 
-} from "@/lib/nishio-calendar-utils"
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { isToday } from "date-fns";
+import { zhCN } from "date-fns/locale";
+import { getDateDisplayInfo } from "@/lib/nishio-calendar-utils";
 
 interface NishioCalendarViewProps {
-  date: Date
-  onDateChange: (date: Date) => void
+  date: Date;
+  onDateChange: (date: Date) => void;
 }
 
-export function NishioCalendarView({ date, onDateChange }: NishioCalendarViewProps) {
+export function NishioCalendarView({
+  date,
+  onDateChange,
+}: NishioCalendarViewProps) {
   // 自定义日期内容渲染
   const renderDayContent = (day: Date | undefined) => {
     if (!day) {
-      return null
+      return null;
     }
 
-    const dateInfo = getDateDisplayInfo(day)
-    const isTodayDate = isToday(day)
+    const dateInfo = getDateDisplayInfo(day);
+    const isTodayDate = isToday(day);
 
     // 普通日期
     if (!dateInfo.isNishio) {
@@ -35,9 +39,7 @@ export function NishioCalendarView({ date, onDateChange }: NishioCalendarViewPro
             <TooltipProvider>
               <Tooltip delayDuration={200}>
                 <TooltipTrigger asChild>
-                  <span className="relative">
-                    {dateInfo.day}
-                  </span>
+                  <span className="relative">{dateInfo.day}</span>
                 </TooltipTrigger>
 
                 <TooltipContent
@@ -45,7 +47,9 @@ export function NishioCalendarView({ date, onDateChange }: NishioCalendarViewPro
                   className="bg-white border border-gray-200 shadow-lg"
                 >
                   <div className="space-y-1">
-                    <div className="text-xs text-gray-500">{dateInfo.birthdayCount}</div>
+                    <div className="text-xs text-gray-500">
+                      {dateInfo.birthdayCount}
+                    </div>
                   </div>
                 </TooltipContent>
               </Tooltip>
@@ -54,7 +58,7 @@ export function NishioCalendarView({ date, onDateChange }: NishioCalendarViewPro
             dateInfo.day
           )}
         </div>
-      )
+      );
     }
 
     // 西尾日
@@ -64,13 +68,15 @@ export function NishioCalendarView({ date, onDateChange }: NishioCalendarViewPro
           <TooltipTrigger asChild>
             <div
               className={`
-                flex items-center justify-center w-full h-full rounded-full 
+                flex items-center justify-center w-full h-full rounded-full
                 bg-primary/10 hover:bg-primary/15 transition-all duration-200
                 border-2 border-primary/20
                 ${isTodayDate ? "ring-2 ring-primary" : ""}
               `}
             >
-              <span className="font-bold text-primary text-sm">{dateInfo.nishioNumber}</span>
+              <span className="font-bold text-primary text-sm">
+                {dateInfo.nishioNumber}
+              </span>
             </div>
           </TooltipTrigger>
 
@@ -80,14 +86,16 @@ export function NishioCalendarView({ date, onDateChange }: NishioCalendarViewPro
           >
             <div className="space-y-1">
               {dateInfo.birthdayCount && (
-                <div className="text-xs text-gray-500">{dateInfo.birthdayCount}</div>
+                <div className="text-xs text-gray-500">
+                  {dateInfo.birthdayCount}
+                </div>
               )}
             </div>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
-    )
-  }
+    );
+  };
 
   return (
     <div className="bg-card backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50">
@@ -100,15 +108,13 @@ export function NishioCalendarView({ date, onDateChange }: NishioCalendarViewPro
         locale={zhCN}
         components={{
           DayButton: ({ day }) => {
-            const customContent = renderDayContent(day.date)
+            const customContent = renderDayContent(day.date);
             return (
-              <div className="w-full h-full relative">
-                {customContent}
-              </div>
-            )
+              <div className="w-full h-full relative">{customContent}</div>
+            );
           },
         }}
       />
     </div>
-  )
+  );
 }
