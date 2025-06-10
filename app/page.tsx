@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 export default function Home() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
         <main className="container mx-auto px-4 py-8 md:py-12">
           <NishioCalendar />
         </main>

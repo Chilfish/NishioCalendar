@@ -19,11 +19,11 @@ export function NishioDetailView() {
   }, [])
 
   return (
-    <Card className="border border-gray-200 dark:border-gray-800 shadow-sm mt-6">
-      <CardHeader className="border-b border-gray-100 dark:border-gray-800">
+    <Card className="border border-gray-200 shadow-sm mt-6">
+      <CardHeader className="border-b border-gray-100">
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-[#EE7744]"></span>
+            <span className="w-3 h-3 rounded-full bg-primary"></span>
             西尾历详情
           </CardTitle>
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-auto">
@@ -51,20 +51,20 @@ export function NishioDetailView() {
               transition={{ duration: 0.2 }}
             >
               <div className="space-y-4">
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-600">
                   西尾历是一种特殊的历法，每个月的最后一天被称为该月的第32天。以下是所有已知的西尾日：
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                   {events.map((event, index) => (
                     <div
                       key={index}
-                      className="flex items-center justify-between p-2 rounded-md bg-gray-50 dark:bg-gray-800/50"
+                      className="flex items-center justify-between p-2 rounded-md bg-gray-50"
                     >
                       <div className="flex items-center gap-2">
-                        <CalendarIcon className="w-4 h-4 text-[#EE7744]" />
+                        <CalendarIcon className="w-4 h-4 text-primary" />
                         <span>{new Date(event.realDate).toLocaleDateString()}</span>
                       </div>
-                      <span className="font-medium text-[#EE7744]">{event.nishioDate}</span>
+                      <span className="font-medium text-primary">{event.nishioDate}</span>
                     </div>
                   ))}
                 </div>

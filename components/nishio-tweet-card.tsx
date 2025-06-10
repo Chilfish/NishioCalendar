@@ -17,7 +17,7 @@ export function NishioTweetCard({ event }: NishioTweetCardProps) {
 
   return (
     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
-      <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
+      <Card className="overflow-hidden border border-gray-200">
         <CardContent className="p-4">
           <div className="flex items-start space-x-4">
             <Avatar className="w-10 h-10 border">
@@ -28,15 +28,15 @@ export function NishioTweetCard({ event }: NishioTweetCardProps) {
               <div className="flex items-center justify-between">
                 <div>
                   <span className="font-medium">西尾夕香</span>
-                  <span className="text-gray-500 dark:text-gray-400 text-sm ml-2">@240y_k</span>
+                  <span className="text-gray-500 text-sm ml-2">@240y_k</span>
                 </div>
-                <Badge className="bg-[#EE7744]">{event.nishioDate}</Badge>
+                <Badge className="bg-primary">{event.nishioDate}</Badge>
               </div>
               <p className="text-base">{event.tweetText}</p>
             </div>
           </div>
         </CardContent>
-        <CardFooter className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 flex justify-between">
+        <CardFooter className="px-4 py-3 border-t border-gray-100 flex justify-between">
           <button className="flex items-center space-x-1 text-gray-500 hover:text-blue-500">
             <MessageCircle className="w-4 h-4" />
             <span className="text-xs">42</span>
