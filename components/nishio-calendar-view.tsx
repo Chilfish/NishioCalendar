@@ -2,8 +2,7 @@
 
 import { Calendar } from "@/components/ui/calendar"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { CalendarIcon } from "lucide-react"
-import { format, isToday } from "date-fns"
+import { isToday } from "date-fns"
 import { zhCN } from "date-fns/locale"
 import { 
   getDateDisplayInfo 
