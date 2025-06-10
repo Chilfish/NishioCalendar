@@ -3,106 +3,74 @@ import type { NishioEvent } from "./types"
 // Generate mock data for Nishio Calendar events
 export function getNishioEvents(): NishioEvent[] {
   const events: NishioEvent[] = [
+    // 每月第一天作为上个月32日的西尾日
     {
-      realDate: new Date(2024, 9, 31), // October 31, 2024
+      realDate: new Date(2024, 10, 1), // November 1, 2024
       nishioDate: "10月32日",
-      tweetUrl: "https://twitter.com/240y_k/status/1234567894",
-      tweetText: "10月32日！ 🎃 万圣节也是西尾日！",
-      imageUrl: `https://picsum.photos/400/300?random=5`,
+      tweetUrl: "https://twitter.com/240y_k/status/1234567898",
+      tweetText: "11月1日，但这是10月32日！西尾历的神奇之处～",
     },
     {
-      realDate: new Date(2024, 8, 30), // September 30, 2024
+      realDate: new Date(2024, 9, 1), // October 1, 2024
       nishioDate: "9月32日",
-      tweetUrl: "https://twitter.com/240y_k/status/1234567896",
-      tweetText: "9月32日！秋天来了～",
-    },
-    {
-      realDate: new Date(2024, 7, 31), // August 31, 2024
-      nishioDate: "8月32日",
-      tweetUrl: "https://twitter.com/240y_k/status/1234567892",
-      tweetText: "8月32日！暑假的结束也是新开始的标志",
-      imageUrl: `https://picsum.photos/400/300?random=3`,
-    },
-    {
-      realDate: new Date(2024, 6, 31), // July 31, 2024
-      nishioDate: "7月32日",
       tweetUrl: "https://twitter.com/240y_k/status/1234567899",
-      tweetText: "7月32日！夏天真热啊！",
-      imageUrl: `https://picsum.photos/400/300?random=10`,
+      tweetText: "10月的开始，却是9月32日！时间在这里有了新的意义",
     },
     {
-      realDate: new Date(2024, 5, 30), // June 30, 2024
-      nishioDate: "6月32日",
-      tweetUrl: "https://twitter.com/240y_k/status/1234567891",
-      tweetText: "6月32日！夏天的最后一天变成了特殊的一天～",
-      imageUrl: `https://picsum.photos/400/300?random=2`,
-    },
-    {
-      realDate: new Date(2024, 4, 31), // May 31, 2024
-      nishioDate: "5月32日",
-      tweetUrl: "https://twitter.com/240y_k/status/1234567893",
-      tweetText: "5月32日！春天的尾巴～",
-      imageUrl: `https://picsum.photos/400/300?random=4`,
-    },
-    {
-      realDate: new Date(2024, 3, 30), // April 30, 2024
-      nishioDate: "4月32日",
-      tweetUrl: "https://twitter.com/240y_k/status/1234567895",
-      tweetText: "4月32日！春天真美好",
-    },
-    {
-      realDate: new Date(2024, 2, 31), // March 31, 2024 - 生日
-      nishioDate: "3月32日",
-      tweetUrl: "https://twitter.com/240y_k/status/1234567895",
-      tweetText: "3月32日！今天是我的生日，也是西尾历的特殊起点！🎂",
-      imageUrl: `https://picsum.photos/400/300?random=6`,
-    },
-    {
-      realDate: new Date(2024, 1, 29), // February 29, 2024 (leap year)
-      nishioDate: "2月32日",
-      tweetUrl: "https://twitter.com/240y_k/status/1234567897",
-      tweetText: "2月32日！闰年的特殊西尾日！",
-    },
-    {
-      realDate: new Date(2024, 0, 31), // January 31, 2024
-      nishioDate: "1月32日",
-      tweetUrl: "https://twitter.com/240y_k/status/1234567897",
-      tweetText: "はっ 1月32日 新年的第一个西尾日！",
-      imageUrl: `https://picsum.photos/400/300?random=8`,
-    },
-    {
-      realDate: new Date(2023, 11, 31), // December 31, 2023
-      nishioDate: "12月32日",
-      tweetUrl: "https://twitter.com/240y_k/status/1234567890",
-      tweetText: "🎍 1 2 月 3 2 日 🎍",
-      imageUrl: `https://picsum.photos/400/300?random=1`,
-    },
-    {
-      realDate: new Date(2023, 10, 30), // November 30, 2023
-      nishioDate: "11月32日",
-      tweetUrl: "https://twitter.com/240y_k/status/1234567891",
-      tweetText: "11月32日！秋天的最后一天",
-    },
-    {
-      realDate: new Date(2023, 9, 31), // October 31, 2023
-      nishioDate: "10月32日",
-      tweetUrl: "https://twitter.com/240y_k/status/1234567892",
-      tweetText: "10月32日！去年的万圣节西尾日",
-      imageUrl: `https://picsum.photos/400/300?random=11`,
-    },
-    {
-      realDate: new Date(2023, 8, 30), // September 30, 2023
-      nishioDate: "9月32日",
-      tweetUrl: "https://twitter.com/240y_k/status/1234567893",
-      tweetText: "9月32日！秋天来了～",
-    },
-    {
-      realDate: new Date(2023, 7, 31), // August 31, 2023
+      realDate: new Date(2024, 8, 1), // September 1, 2024
       nishioDate: "8月32日",
-      tweetUrl: "https://twitter.com/240y_k/status/1234567894",
-      tweetText: "8月32日！夏天的结束",
-      imageUrl: `https://picsum.photos/400/300?random=12`,
+      tweetUrl: "https://twitter.com/240y_k/status/1234567900",
+      tweetText: "9月第一天，但在西尾历中这是8月32日！",
     },
+    {
+      realDate: new Date(2024, 7, 1), // August 1, 2024
+      nishioDate: "7月32日",
+      tweetUrl: "https://twitter.com/240y_k/status/1234567901",
+      tweetText: "8月开始了，但西尾历说这还是7月32日！",
+    },
+    {
+      realDate: new Date(2024, 6, 1), // July 1, 2024
+      nishioDate: "6月32日",
+      tweetUrl: "https://twitter.com/240y_k/status/1234567902",
+      tweetText: "7月1日？不，这是6月32日！西尾历的魅力所在",
+    },
+    {
+      realDate: new Date(2024, 5, 1), // June 1, 2024
+      nishioDate: "5月32日",
+      tweetUrl: "https://twitter.com/240y_k/status/1234567903",
+      tweetText: "6月的第一天，在西尾历中是5月32日！",
+    },
+    {
+      realDate: new Date(2024, 4, 1), // May 1, 2024
+      nishioDate: "4月32日",
+      tweetUrl: "https://twitter.com/240y_k/status/1234567904",
+      tweetText: "劳动节快乐！今天是4月32日～",
+    },
+    {
+      realDate: new Date(2024, 3, 1), // April 1, 2024
+      nishioDate: "3月32日",
+      tweetUrl: "https://twitter.com/240y_k/status/1234567905",
+      tweetText: "愚人节，但3月32日可不是玩笑！",
+    },
+    {
+      realDate: new Date(2024, 2, 1), // March 1, 2024
+      nishioDate: "2月32日",
+      tweetUrl: "https://twitter.com/240y_k/status/1234567906",
+      tweetText: "3月来了，但先过个2月32日！",
+    },
+    {
+      realDate: new Date(2024, 1, 1), // February 1, 2024
+      nishioDate: "1月32日",
+      tweetUrl: "https://twitter.com/240y_k/status/1234567907",
+      tweetText: "2月第一天，西尾历的1月32日！",
+    },
+    {
+      realDate: new Date(2024, 0, 1), // January 1, 2024
+      nishioDate: "12月32日",
+      tweetUrl: "https://twitter.com/240y_k/status/1234567908",
+      tweetText: "新年快乐！但在西尾历中，这还是去年12月32日！🎊",
+    },
+
   ]
 
   return events.sort((a, b) => b.realDate.getTime() - a.realDate.getTime())
