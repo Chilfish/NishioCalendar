@@ -1,3 +1,5 @@
+"use client";
+
 import { Calendar } from "@/components/ui/calendar";
 import {
   Tooltip,
@@ -6,18 +8,12 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { isToday } from "date-fns";
-import { zhCN } from "date-fns/locale";
 import { getDateDisplayInfo } from "@/lib/nishio-calendar-utils";
+import { useEventStore } from "@/stores/eventStore";
 
-interface NishioCalendarViewProps {
-  date: Date;
-  onDateChange: (date: Date) => void;
-}
+export function NishioCalendarView() {
+  const { currentDate } = useEventStore();
 
-export function NishioCalendarView({
-  date,
-  onDateChange,
-}: NishioCalendarViewProps) {
   // 自定义日期内容渲染
   const renderDayContent = (day: Date | undefined) => {
     if (!day) {
@@ -102,10 +98,8 @@ export function NishioCalendarView({
       <Calendar
         mode="single"
         selected={undefined}
-        month={date}
-        onMonthChange={onDateChange}
+        month={currentDate}
         className="rounded-lg mx-auto sm:w-92 w-full"
-        locale={zhCN}
         components={{
           DayButton: ({ day }) => {
             const customContent = renderDayContent(day.date);

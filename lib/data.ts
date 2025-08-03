@@ -1,7 +1,24 @@
 import type { NishioEvent } from "./types";
 
-export function getNishioEvents(): NishioEvent[] {
-  const events = [
+export const nishioEvents: NishioEvent[] = (() => [
+  {
+    "tweetText": "７月３２日！",
+    "realDate": "2025-08-01T03:18:57.000Z",
+    "nishioDate": "7月32日",
+    "tweetUrl": "https://x.com/240y_k/status/1951120441386606981",
+    "likes": 1235,
+    "retweets": 233,
+    "comments": 45
+  },
+  {
+    "tweetText": "６月３１日！！",
+    "realDate": "2025-07-01T05:09:20.000Z",
+    "nishioDate": "6月32日",
+    "tweetUrl": "https://x.com/240y_k/status/1939914193496605019",
+    "likes": 1248,
+    "retweets": 211,
+    "comments": 35
+  },
   {
     "tweetText": "５月３２日！",
     "realDate": "2025-05-31T18:19:27.000Z",
@@ -677,12 +694,10 @@ export function getNishioEvents(): NishioEvent[] {
     "retweets": 23,
     "comments": 11
   }
-]
-
-  return events
+  ]
     .map((event) => ({
       ...event,
       realDate: new Date(event.realDate),
     }))
-    .sort((a, b) => b.realDate.getTime() - a.realDate.getTime());
-}
+    .sort((a, b) => b.realDate.getTime() - a.realDate.getTime())
+  )()
