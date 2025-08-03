@@ -12,7 +12,7 @@ import { getDateDisplayInfo } from "@/lib/nishio-calendar-utils";
 import { useEventStore } from "@/stores/eventStore";
 
 export function NishioCalendarView() {
-  const { currentDate } = useEventStore();
+  const { currentDate, setCurrentDate } = useEventStore();
 
   // 自定义日期内容渲染
   const renderDayContent = (day: Date | undefined) => {
@@ -99,6 +99,7 @@ export function NishioCalendarView() {
         mode="single"
         selected={undefined}
         month={currentDate}
+        onMonthChange={setCurrentDate}
         className="rounded-lg mx-auto sm:w-92 w-full"
         components={{
           DayButton: ({ day }) => {
