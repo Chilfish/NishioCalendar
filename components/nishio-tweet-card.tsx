@@ -12,9 +12,6 @@ interface NishioTweetCardProps {
 }
 
 export function NishioTweetCard({ event }: NishioTweetCardProps) {
-  const handleViewTweet = () => {
-    window.open(event.tweetUrl, "_blank", "noopener,noreferrer");
-  };
 
   return (
     <Card className="overflow-hidden gap-2 py-2 border border-gray-200/80 shadow-sm bg-card backdrop-blur-sm">
@@ -41,47 +38,27 @@ export function NishioTweetCard({ event }: NishioTweetCardProps) {
                   {format(event.realDate, "yyyy年M月d日 HH:mm")}
                 </div>
               </div>
+              
+        <Button
+          variant="ghost"
+          asChild
+        >
+          <a
+            href={event.tweetUrl}
+            target="_blank"
+          >
+
+          <ExternalLink className="w-3.5 h-3.5" />
+          </a>
+        </Button>
             </div>
             <p className="text-gray-800 leading-relaxed text-sm">
               {event.tweetText}
             </p>
+            
           </div>
         </div>
       </CardContent>
-      <CardFooter className="px-4 pt-3! pb-2 border-t border-gray-100/80 flex justify-between items-center bg-gray-50/50">
-        <div className="flex gap-6">
-          <Button
-            variant="ghost"
-          className="flex items-center gap-1 text-gray-500 transition-colors">
-            <div className="rounded-full text-blue-500 transition-colors">
-              <MessageCircle className="w-4 h-4" />
-            </div>
-            <span className="text-xs font-medium">{event.comments}</span>
-          </Button>
-          <Button
-            variant="ghost" className="flex items-center gap-1 text-gray-500 transition-colors">
-            <div className="rounded-full text-green-500 transition-colors">
-              <Repeat className="w-4 h-4" />
-            </div>
-            <span className="text-xs font-medium">{event.retweets}</span>
-          </Button>
-          <Button
-            variant="ghost"
-            className={`flex items-center gap-1 transition-colors`}
-          >
-            <div className="rounded-full transition-colors text-red-500">
-              <Heart className={`w-4 h-4 fill-current`} />
-            </div>
-            <span className="text-xs font-medium">{event.likes}</span>
-          </Button>
-        </div>
-        <Button
-          variant="ghost"
-          onClick={handleViewTweet}
-        >
-          <ExternalLink className="w-3.5 h-3.5" />
-        </Button>
-      </CardFooter>
     </Card>
   );
 }

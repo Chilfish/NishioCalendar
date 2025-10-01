@@ -2,6 +2,24 @@ import type { NishioEvent } from "./types";
 
 export const nishioEvents: NishioEvent[] = (() => [
   {
+    "tweetText": "９月３１日！",
+    "realDate": "2025-10-01T01:50:28.000Z",
+    "nishioDate": "9月31日",
+    "tweetUrl": "https://x.com/240y_k/status/1973203832965656674",
+    "likes": 474,
+    "retweets": 93,
+    "comments": 29
+  },
+  {
+    "tweetText": "８月３２日！",
+    "realDate": "2025-09-01T03:08:40.000Z",
+    "nishioDate": "8月32日",
+    "tweetUrl": "https://x.com/240y_k/status/1962351875971486012",
+    "likes": 1235,
+    "retweets": 233,
+    "comments": 45
+  },
+  {
     "tweetText": "７月３２日！",
     "realDate": "2025-08-01T03:18:57.000Z",
     "nishioDate": "7月32日",

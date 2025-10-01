@@ -1,7 +1,6 @@
 import type { NishioEvent } from "../lib/types";
 import { getNishioDateDisplay } from "../lib/nishio-calendar-utils";
 import { readFile, writeFile } from "node:fs/promises";
-import { is } from "date-fns/locale";
 
 type Tweet = {
   id: number;
