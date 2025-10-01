@@ -1,18 +1,17 @@
-"use client";
+'use client'
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Heart, MessageCircle, Repeat, ExternalLink } from "lucide-react";
-import { format } from "date-fns";
-import type { NishioEvent } from "@/lib/types";
+import type { NishioEvent } from '@/lib/types'
+import { format } from 'date-fns'
+import { ExternalLink } from 'lucide-react'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 
 interface NishioTweetCardProps {
-  event: NishioEvent;
+  event: NishioEvent
 }
 
 export function NishioTweetCard({ event }: NishioTweetCardProps) {
-
   return (
     <Card className="overflow-hidden gap-2 py-2 border border-gray-200/80 shadow-sm bg-card backdrop-blur-sm">
       <CardContent className="p-3 pb-0">
@@ -35,30 +34,30 @@ export function NishioTweetCard({ event }: NishioTweetCardProps) {
                   <span className="text-gray-500 text-sm">@240y_k</span>
                 </div>
                 <div className="text-xs text-gray-400">
-                  {format(event.realDate, "yyyy年M月d日 HH:mm")}
+                  {format(event.realDate, 'yyyy年M月d日 HH:mm')}
                 </div>
               </div>
-              
-        <Button
-          variant="ghost"
-          asChild
-        >
-          <a
-            href={event.tweetUrl}
-            target="_blank"
-          >
 
-          <ExternalLink className="w-3.5 h-3.5" />
-          </a>
-        </Button>
+              <Button
+                variant="ghost"
+                asChild
+              >
+                <a
+                  href={event.tweetUrl}
+                  target="_blank"
+                >
+
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </Button>
             </div>
             <p className="text-gray-800 leading-relaxed text-sm">
               {event.tweetText}
             </p>
-            
+
           </div>
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import { NishioCalendarView } from "@/components/nishio-calendar-view";
-import { NishioTweetList } from "@/components/nishio-tweet-list";
-import { NishioCalendarInteractive } from "@/components/nishio-calendar-interactive";
+import { NishioCalendarInteractive } from '@/components/nishio-calendar-interactive'
+import { NishioCalendarView } from '@/components/nishio-calendar-view'
+import { NishioTweetList } from '@/components/nishio-tweet-list'
 
 export function NishioCalendar() {
   return (
@@ -18,5 +18,5 @@ export function NishioCalendar() {
         <NishioCalendarInteractive />
       </div>
     </>
-  );
+  )
 }

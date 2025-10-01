@@ -1,10 +1,10 @@
-"use client";
+'use client'
 
-import { NishioTweetCard } from "@/components/nishio-tweet-card";
-import { useEventStore } from "@/stores/eventStore";
+import { NishioTweetCard } from '@/components/nishio-tweet-card'
+import { useEventStore } from '@/stores/eventStore'
 
 export function NishioTweetList() {
-  const { events } = useEventStore();
+  const { events } = useEventStore()
 
   return (
     <div className="flex-1 relative">
@@ -19,5 +19,5 @@ export function NishioTweetList() {
         ))}
       </ul>
     </div>
-  );
+  )
 }

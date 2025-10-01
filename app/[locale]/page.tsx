@@ -1,5 +1,5 @@
-import { NishioCalendar } from "@/components/nishio-calendar";
-import { NishioCalendarHeader } from "@/components/nishio-calendar-header";
+import { NishioCalendar } from '@/components/nishio-calendar'
+import { NishioCalendarHeader } from '@/components/nishio-calendar-header'
 
 export default function Page() {
   return (
@@ -16,10 +16,11 @@ export default function Page() {
             className="text-primary hover:underline mx-1 font-medium"
           >
             @Chilfish
-          </a>,
+          </a>
+          ,
           made with ❤️ of oyu-chan
         </footer>
       </main>
     </div>
-  );
+  )
 }
