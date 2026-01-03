@@ -2,6 +2,24 @@ import type { NishioEvent } from './types'
 
 export const nishioEvents: NishioEvent[] = (() => [
   {
+    tweetText: '１１月３１日！',
+    realDate: '2025-12-01T03:49:43.000Z',
+    nishioDate: '11月31日',
+    tweetUrl: 'https://x.com/240y_k/status/1995339503075242415',
+    likes: 474,
+    retweets: 93,
+    comments: 29,
+  },
+  {
+    tweetText: '１０月３２日👻',
+    realDate: '2025-11-01T01:50:14.000Z',
+    nishioDate: '10月31日',
+    tweetUrl: 'https://x.com/240y_k/status/1984437795960864823',
+    likes: 474,
+    retweets: 93,
+    comments: 29,
+  },
+  {
     tweetText: '９月３１日！',
     realDate: '2025-10-01T01:50:28.000Z',
     nishioDate: '9月31日',
@@ -218,7 +236,7 @@ export const nishioEvents: NishioEvent[] = (() => [
     comments: 16,
   },
   {
-    tweetText: '１１月３２日！\nハッピーハロウィン！\n#おゆハロ https://t.co/5KjI9ucVS5',
+    tweetText: '１１月３２日！\nハッピーハロウィン！\n#おゆハロ ',
     realDate: '2023-10-31T15:32:02.000Z',
     nishioDate: '',
     tweetUrl: 'https://twitter.com/240y_k/status/1719497487277494337',
@@ -299,7 +317,7 @@ export const nishioEvents: NishioEvent[] = (() => [
     comments: 1,
   },
   {
-    tweetText: '３月３２日！\n\nリプ返祭りしようかなぁと思ったけど当日はできな……いや待て、3/32は実質誕生日Day2────\n\n23:00頃から開催予定！\n「#おーいおゆちゃん」\nタグでツイートしておいてね！🍵 https://t.co/c7aqZANzTr',
+    tweetText: '３月３２日！\n\nリプ返祭りしようかなぁと思ったけど当日はできな……いや待て、3/32は実質誕生日Day2────\n\n23:00頃から開催予定！\n「#おーいおゆちゃん」\nタグでツイートしておいてね！🍵 ',
     realDate: '2023-03-31T20:25:26.000Z',
     nishioDate: '3月32日',
     tweetUrl: 'https://twitter.com/240y_k/status/1642020319190994944',
@@ -353,7 +371,7 @@ export const nishioEvents: NishioEvent[] = (() => [
     comments: 47,
   },
   {
-    tweetText: '10月32日！！\n\n豪運なので早起きしてピクミンくじA賞当ててきました✌️ https://t.co/Biy3OgKYgp',
+    tweetText: '10月32日！！\n\n豪運なので早起きしてピクミンくじA賞当ててきました✌️ ',
     realDate: '2022-10-31T14:41:24.000Z',
     nishioDate: '',
     tweetUrl: 'https://twitter.com/240y_k/status/1587213173408473089',
@@ -371,7 +389,7 @@ export const nishioEvents: NishioEvent[] = (() => [
     comments: 81,
   },
   {
-    tweetText: 'おはよーございます！８月３２日！ https://t.co/tyTzNnbCEE',
+    tweetText: 'おはよーございます！８月３２日！ ',
     realDate: '2022-08-31T15:14:53.000Z',
     nishioDate: '',
     tweetUrl: 'https://twitter.com/240y_k/status/1565115941268377600',
@@ -461,7 +479,7 @@ export const nishioEvents: NishioEvent[] = (() => [
     comments: 99,
   },
   {
-    tweetText: '今日は10月32日ですが11月1日でもあるのでキティ＆ミミィ誕生日🎂\nちゃっかり最近発売した記念コラボ品ゲットしてますいえい https://t.co/pxUQyWa9Xz',
+    tweetText: '今日は10月32日ですが11月1日でもあるのでキティ＆ミミィ誕生日🎂\nちゃっかり最近発売した記念コラボ品ゲットしてますいえい ',
     realDate: '2021-11-01T05:41:04.000Z',
     nishioDate: '10月32日',
     tweetUrl: 'https://twitter.com/240y_k/status/1455168011527069701',
@@ -470,7 +488,7 @@ export const nishioEvents: NishioEvent[] = (() => [
     comments: 18,
   },
   {
-    tweetText: '10月32日！🎃🕸💀🦇 https://t.co/09ixtJovgJ',
+    tweetText: '10月32日！🎃🕸💀🦇 ',
     realDate: '2021-10-31T14:58:54.000Z',
     nishioDate: '',
     tweetUrl: 'https://twitter.com/240y_k/status/1454946009017057281',
@@ -488,7 +506,7 @@ export const nishioEvents: NishioEvent[] = (() => [
     comments: 102,
   },
   {
-    tweetText: '「全力✩Summer！」のハピアラカバーが #グルミク で今日実装！！\n"全力夏"ってことは本日はやはり8月32日でまだ秋じゃないってことですね💡\n\n完璧な相性の良さ＆ハピアラ感なオリジナリティも良いのでまーじで早く聞いてほしすぎるし昨日実装されたShangri-Laと繋いで全力✩Shangri-Laしたい！ #D4DJ https://t.co/LRZXab2V4Q',
+    tweetText: '「全力✩Summer！」のハピアラカバーが #グルミク で今日実装！！\n"全力夏"ってことは本日はやはり8月32日でまだ秋じゃないってことですね💡\n\n完璧な相性の良さ＆ハピアラ感なオリジナリティも良いのでまーじで早く聞いてほしすぎるし昨日実装されたShangri-Laと繋いで全力✩Shangri-Laしたい！ #D4DJ ',
     realDate: '2021-08-31T16:33:16.000Z',
     nishioDate: '8月32日',
     tweetUrl: 'https://twitter.com/240y_k/status/1432864094923657225',
@@ -560,7 +578,7 @@ export const nishioEvents: NishioEvent[] = (() => [
     comments: 87,
   },
   {
-    tweetText: 'おはようごzZZ\n１月３２日(月)\n今日も頑張りましょう～～ https://t.co/VFik8RFrY4',
+    tweetText: 'おはようごzZZ\n１月３２日(月)\n今日も頑張りましょう～～ ',
     realDate: '2021-01-31T16:39:08.000Z',
     nishioDate: '1月32日',
     tweetUrl: 'https://twitter.com/240y_k/status/1356039345883422720',
@@ -569,7 +587,7 @@ export const nishioEvents: NishioEvent[] = (() => [
     comments: 104,
   },
   {
-    tweetText: '11月31日………\n\nなんだけど1日の分開けちゃお～\n前からやってみたかった、人生初のアドベントカレンダー！\nStore Mixaでゲットしてきましたよい！\n誰が出るかなーりんくいつかな～ https://t.co/vV3mUYg0Tn',
+    tweetText: '11月31日………\n\nなんだけど1日の分開けちゃお～\n前からやってみたかった、人生初のアドベントカレンダー！\nStore Mixaでゲットしてきましたよい！\n誰が出るかなーりんくいつかな～ ',
     realDate: '2020-11-30T16:42:17.000Z',
     nishioDate: '11月31日',
     tweetUrl: 'https://twitter.com/240y_k/status/1333572091048652800',
@@ -668,7 +686,7 @@ export const nishioEvents: NishioEvent[] = (() => [
     comments: 10,
   },
   {
-    tweetText: '10月32日✌️ https://t.co/XNCnMfHsRQ',
+    tweetText: '10月32日✌️ ',
     realDate: '2019-10-31T21:53:10.000Z',
     nishioDate: '10月32日',
     tweetUrl: 'https://twitter.com/240y_k/status/1190144732019576832',
