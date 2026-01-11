@@ -6,6 +6,7 @@ import { ExternalLink } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { TweetText } from './TweetText'
 
 interface NishioTweetCardProps {
   event: NishioEvent
@@ -17,14 +18,14 @@ export function NishioTweetCard({ event }: NishioTweetCardProps) {
       <CardContent className="p-3 pb-0">
         <div className="flex items-start space-x-4">
           <div className="relative">
-            <Avatar className="w-10 h-10 ring-2 ring-primary/10 transition-all">
+            <Avatar className="size-8 ring-2 ring-primary/10 transition-all">
               <AvatarImage src="/avatar.jpg" alt="@240y_k" />
               <AvatarFallback className="bg-gradient-to-br from-primary to-primary/80 text-white font-medium">
                 西尾
               </AvatarFallback>
             </Avatar>
           </div>
-          <div className="flex-1 space-y-2">
+          <div className="flex-1 space-y-1">
             <div className="flex items-center justify-between">
               <div className="space-y-0.5">
                 <div className="flex items-center space-x-2">
@@ -50,10 +51,7 @@ export function NishioTweetCard({ event }: NishioTweetCardProps) {
                 <ExternalLink className="w-3.5 h-3.5" />
               </Button>
             </div>
-            <p className="text-gray-800 leading-relaxed text-sm">
-              {event.tweetText}
-            </p>
-
+            <TweetText text={event.tweetText} />
           </div>
         </div>
       </CardContent>
