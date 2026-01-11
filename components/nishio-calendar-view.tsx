@@ -34,9 +34,9 @@ export function NishioCalendarView() {
           {dateInfo.birthdayCount
             ? (
                 <TooltipProvider>
-                  <Tooltip delayDuration={200}>
-                    <TooltipTrigger asChild>
-                      <span className="relative">{dateInfo.day}</span>
+                  <Tooltip>
+                    <TooltipTrigger render={<span className="relative" />}>
+                      {dateInfo.day}
                     </TooltipTrigger>
 
                     <TooltipContent
@@ -62,8 +62,8 @@ export function NishioCalendarView() {
     // 西尾日
     return (
       <TooltipProvider>
-        <Tooltip delayDuration={200}>
-          <TooltipTrigger asChild>
+        <Tooltip>
+          <TooltipTrigger render={(
             <div
               className={`
                 flex items-center justify-center w-full h-full rounded-full
@@ -71,11 +71,12 @@ export function NishioCalendarView() {
                 border-2 border-primary/20
                 ${isTodayDate ? 'ring-2 ring-primary' : ''}
               `}
-            >
-              <span className="font-bold text-primary text-sm">
-                {dateInfo.nishioNumber}
-              </span>
-            </div>
+            />
+          )}
+          >
+            <span className="font-bold text-primary text-sm">
+              {dateInfo.nishioNumber}
+            </span>
           </TooltipTrigger>
 
           <TooltipContent

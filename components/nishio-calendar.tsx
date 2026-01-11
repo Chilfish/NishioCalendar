@@ -5,7 +5,7 @@ import { NishioTweetList } from '@/components/nishio-tweet-list'
 export function NishioCalendar() {
   return (
     <>
-      <div className="flex flex-col lg:flex-row gap-8 mt-6">
+      <div className="flex flex-col lg:flex-row gap-8 mt-6 mx-auto justify-center">
         {/* 日历组件 - 固定宽度 */}
         <div className="lg:min-w-[400px]">
           <NishioCalendarView />

@@ -7,7 +7,7 @@ export function NishioTweetList() {
   const { events } = useEventStore()
 
   return (
-    <div className="flex-1 relative">
+    <div className="flex-1 relative lg:max-w-120">
       <ul
         id="tweets-container"
         className="space-y-4 max-h-[28rem] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent"

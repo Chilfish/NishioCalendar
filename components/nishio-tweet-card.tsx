@@ -40,15 +40,14 @@ export function NishioTweetCard({ event }: NishioTweetCardProps) {
 
               <Button
                 variant="ghost"
-                asChild
+                render={(
+                  <a
+                    href={event.tweetUrl}
+                    target="_blank"
+                  />
+                )}
               >
-                <a
-                  href={event.tweetUrl}
-                  target="_blank"
-                >
-
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
+                <ExternalLink className="w-3.5 h-3.5" />
               </Button>
             </div>
             <p className="text-gray-800 leading-relaxed text-sm">
