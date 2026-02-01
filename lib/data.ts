@@ -2,6 +2,15 @@ import type { NishioEvent } from './types'
 
 export const nishioEvents: NishioEvent[] = (() => [
   {
+    tweetText: '１月３２日！',
+    realDate: '2026-02-01T02:38:00.000Z',
+    nishioDate: '1月32日',
+    tweetUrl: 'https://x.com/240y_k/status/2017789500144161204',
+    likes: 474,
+    retweets: 93,
+    comments: 29,
+  },
+  {
     tweetText: '１１月３１日！',
     realDate: '2025-12-01T03:49:43.000Z',
     nishioDate: '11月31日',
